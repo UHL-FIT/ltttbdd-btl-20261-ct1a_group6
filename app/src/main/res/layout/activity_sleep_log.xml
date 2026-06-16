@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCE4EC"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp">
+
+        <ImageButton
+            android:id="@+id/btnBackSleep"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="#E91E63" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Theo Dõi Giấc Ngủ"
+            android:textColor="#212121"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hôm qua bạn ngủ bao nhiêu tiếng?"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:layout_marginBottom="12dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#FFF3F8">
+
+        <EditText
+            android:id="@+id/edtSleepHours"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@android:color/transparent"
+            android:hint="Ví dụ: 7.5"
+            android:inputType="numberDecimal"
+            android:paddingHorizontal="16dp"
+            android:textColor="#333333" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chất lượng giấc ngủ"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:layout_marginBottom="12dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="32dp">
+
+        <Button
+            android:id="@+id/btnQualityGood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tốt 😊"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#E040FB"/>
+
+        <Button
+            android:id="@+id/btnQualityNormal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ổn 😐"
+            android:layout_marginHorizontal="4dp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#555555"/>
+
+        <Button
+            android:id="@+id/btnQualityBad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tệ 😴"
+            android:layout_marginStart="4dp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#555555"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSaveSleep"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:backgroundTint="#E91E63"
+        android:text="Lưu Dữ Liệu"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:cornerRadius="16dp" />
+
+</LinearLayout>
